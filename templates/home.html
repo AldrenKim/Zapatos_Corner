@@ -1,0 +1,302 @@
+{% load static %}
+ <!DOCTYPE html>
+ <html lang = "en">
+     <head>
+
+         <meta charset="UTF - 8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <title>
+             SAPATOS CORNER
+         </title>
+         <link rel="stylesheet" href="{% static '../static/css/style.css' %}">
+         <script src="{% static '../static/javascript/jscript.js' % }"></script>
+         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+     </head>
+     <body>
+
+        <!-- NAVIGATION BAR -->
+
+        <div class = "navbar">
+            <div class = "logo">
+                <img src = "{%static '../static/resources/images/logo.png'%}" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="home.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="mens.html">MENS</a>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="">SHOP ALL</a></li>
+                                <li><a href="">TYPES</a></li>
+                                <li><a href="">BRANDS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">WOMENS</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="">SHOP ALL</a></li>
+                                <li><a href="">TYPES</a></li>
+                                <li><a href="">BRANDS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">KIDS</a>
+                        <div class="sub-menu-3">
+                            <ul>
+                                <li><a href="">SHOP ALL</a></li>
+                                <li><a href="">TYPES</a></li>
+                                <li><a href="">BRANDS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" href="#exampleModal">Contact Us</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" href="#exampleModalView">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        
+            <div class="account">
+                <form class="search-form" action="">
+                    <input type="text" placeholder="Search">
+                </form>
+                <button class="search-btn"><i class="fa fa-search"></i></button>
+                <a href="{% url 'login' %}"><button class="account-btn"><i class="fa fa-user-circle-o"></i></button></a>    
+                <button class="cart-btn"><i class="fa fa-shopping-cart"></i>  0</button>
+                            
+            </div>
+        </div>
+
+        <!-- MAIN DISPLAY -->
+
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <h1>Give Your Workout <br> A New Style!</h1>
+                        <p>Success isn't always about greatness. 
+                            It's about consistency. Consistent<br>
+                            hard work gains success. Greatness will
+                            come.
+                        </p>
+    
+                        <a href="" class="btn">Explore Now &#8594;</a>
+                    </div>
+    
+                    <div class="col-2">
+                        <img src="{% static '../static/resources/images/explore.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-----BRANDS ------->
+       <div class="small-container">
+        <div class="indent">
+            <div class="small-container-2">
+             <br><br>
+             <div class="row">
+                 <div class="col-3">
+                     <img src="{% static '../static/resources/images/brand-1.jpg'%}">
+                     <div class="middle">
+                         <div class="brand">NIKE</div>
+                     </div>
+                 </div>
+                 <div class="col-3">
+                     <img src="{% static '../static/resources/images/brand-2.jpg'%}">
+                     <div class="middle">
+                         <div class="brand">ADIDAS</div>
+                     </div>
+                 </div>
+                 <div class="col-3">
+                     <img src="{% static '../static/resources/images/brand-3.jpg'%}">
+                     <div class="middle">
+                         <div class="brand">CONVERSE</div>
+                     </div>
+                 </div>
+                 <div class="col-3">
+                     <img src="{% static '../static/resources/images/brand-4.jpg'%}">
+                     <div class="middle">
+                         <div class="brand">PUMA</div>
+                     </div>
+                 </div>
+             </div>
+             
+             <!-- BEST SELLERS -->
+
+             <h2 class="title">BEST SELLERS</h2>
+             <div class="row">
+                 <div class="col-3">
+                     <img src="{%static '../static/resources/images/bs-1.jpg'%}">
+                     <h6>Nike Air Force 1 07</h6>
+                     <p>P4 930.00</p>
+                 </div>
+                 <div class="col-3">
+                     <img src="{% static '../static/resources/images/bs-2.jp' %}g">
+                     <h6>Converse Pro Leather Ox</h6>
+                     <p>P4 060.00</p>
+                 </div>
+                 <div class="col-3">
+                     <img src="{% static '../static/resources/images/bs-3.jpg' %}">
+                     <h6>adidas Originals Womens Sambrose</h6>
+                     <p>P3 480.00</p>
+                 </div>
+                 <div class="col-3">
+                     <img src=" {% static '../static/resources/images/bs-4.jp' %}g">
+                     <h6>Puma Womens Aeon Rewind</h6>
+                     <p>P2 610.00</p>
+                 </div>
+             </div>
+ 
+            </div>
+        </div>
+       </div>
+
+       <!-----EXCLUSIVE OFFER ------->
+
+       
+       <div class="offer">
+           <div class="small-container-3">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="{% static '../static/resources/images/exclusive.jpg' %}" class="offer-img">
+                    </div>
+                    <div class="col-2">
+                        <h4>Exclusively Available on ZapatosCorner</h4>
+                        <h1>Reverse Shattered Backboard</h1>
+                        <small>Although factory errors can be a nightmare for 
+                            sneaker collectors, sometimes these defects can actually 
+                            be a blessing in disguise. One lucky sneakerhead really 
+                            got lucky when he received a pair of “Reverse Shattered 
+                            Backboard” Air Jordan 1s with upside down Swooshes 
+                            directly from Nike.</small><br>
+                        <a href="" class="btn">Buy Now &#8594;</a>
+                    </div>
+                </div>
+           </div>
+       </div>
+
+       <!-----FOOTER ------->
+
+       <div class="footer">
+           <div class="container">
+            <div class="row">
+                <br><br><br>
+                <p>Copyright&#xA9; 2020 ZapatosCorner. 
+                    Designated trademarks and brands are the property
+                    of their respective owners. Use of this Web site 
+                    constitutes acceptance of the ZapatosCorner 
+                    Privacy Policy.
+                </p>
+            </div>
+            <div class="row">
+                <br><br><br>
+                <br><br><br>
+                <nav>
+                    <ul>
+                        <li><a href=""><u>PRIVACY</u></a></li>
+                        <li><a href=""><u>TERMS & CONDITIONS</u></a></li>
+                        <li><a href=""><u>HELPS & FAQS</u></a></li>
+                        <li><a href=""><u>FAST DELIVERY</u></a></li>
+                        <li><a href=""><u>CAREERS</u></a></li>
+                        <li><a href=""><u>CUSTOMER SERVICE</u></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- COMPANIES FOR TRANSACTION -->
+
+            <div class="cards">
+                <br>
+                    <div class="col-5">
+                        <img src="{% static '../static/resources/images/logo-visa.png' %}">
+                    </div>
+                    <div class="col-5">
+                        <img src="{% static '../static/resources/images/logo-mastercard.png' %}">
+                    </div>
+                    <div class="col-5">
+                        <img src="{% static '../static/resources/images/logo-americanexpress.png' %}">
+                    </div>
+                    <div class="col-5">
+                        <img src="{% static '../static/resources/images/logo-paypal.png' %}">
+                    </div>
+                <br><br><br>
+            </div>
+           </div>
+       </div>
+
+       <!-- Modal -->
+       <div class="modal fade center1" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="font-size:20px;">ABOUT US</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Atlantic Shopping is the online trading name of V.N & Britannic Warehouse Ltd., 
+                    a well-established family-run business supplying an excellent range of home and 
+                    commercial furniture. Based in the heart of Birmingham’s City Centre, our warehouses 
+                    have a huge stock base, which enables us to offer free next day delivery to UK Mainland, 
+                    setting us apart from our competitors.
+                    <br><br>
+                    Established over 50 years ago, we’re proud to still be led by a team of dedicated and 
+                    motivated family members. Our long company history demonstrates our humble beginnings, 
+                    however our philosophy has always been unchanging: to offer the latest styles at the best 
+                    prices, with excellent customer service.
+                  </p>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+      <!-- Modal VIEW-->
+      <div class="modal fade center1" id="exampleModalView" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel" style="font-size:20px;">CONTACT US</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <p>
+                    <b>Mon - Sat:</b> 10AM - 4PM <br><br>
+                    <b>Online Sales Team:</b>
+                    (02) 8248 3200 | 09088177788 | 09171117788 <br><br>
+                    <b>Viber:</b>
+                    09498898438 | 09178799483 | 09209328996 <br><br>
+                    <b>Corporate Sales Team :</b>
+                    (02) 8248 3233 | (02) 8248 3255 <br><br>
+                    <b>Customer Service:</b>
+                    (02) 921-0888 | 09209328523
+                    customerservice@abenson.com <br><br>
+                </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+     </body>
+ </html>

@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Registration</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../javascript/jscript.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <title>Product Registration</title>
+    </head>
+    <body>
+        <div class="row bar">
+            <div class="col-md-1 fix"></div>
+            <div class="col-md-11 fix">
+                <span class="cont1" style="font-size: 25px;">Product Registration</span>
+            </div>
+        </div>
+            
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100"  src="../images/background2.jpg"  height="1000" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="../images/exclusive.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="../images/explore.jpg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <div class="container">
+                <label for="productInfo"><h4>Product Information<h4></label>
+                    <br>
+                    <label for="productInfo"><h6>Date Registered<h6></label><br>
+                        <label for="productInfo"><h6>SKU<h6></label><br>
+                            <label for="productInfo"><h6>Category<h6></label><br>
+                    <form action="">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" id="prodName" placeholder="Name" name="prodName">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="brand" placeholder="Brand" name="brand">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="color" placeholder="Color" name="color">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" id="size" placeholder="Size/Dimension" name="size">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="price" placeholder="Price" name="price">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="stocks" placeholder="No. of stocks" name="stocks">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                    </form>
+                </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <link rel="stylesheet" href="{% static '../static/bootstrap-4.5.2-dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static '../static/css/index.css' %}">
+	<title>IM2</title>
+</head>
+<body>
+    <div class="row bar">
+        <div class="col-md-1 fix"></div>
+        <div class="col-md-9 fix">
+            <a href="\"><span class="cont1">Zapatos Corner</span></a>
+        </div>
+        <div class="col-md-2 fix">
+            <span class="cont1">Need Help?</span>
+        </div>
+    </div>
+     <div class="container">
+         <div class="row">
+                <div class="col-1 logo">
+                 Logo Here
+               <!--  <img src="../resources/logo.png"/> -->
+                </div>
+            <div class="col-11">
+                <div class="cnt-right justify-content-around">
+                    <div class="card">
+                        <div class="card-body" style="padding: 2rem">
+                            <div class="d-flex justify-content-center">
+                                Lorem Ipsum
+                            </div>
+                        <hr>
+                            <h5 class="">Log-in</h5>
+                            <!-- <form action="dashboard\"  method=""> ../html/dashboard.html
+                                <div class="form-group">
+                                    <input type="text" class="forminput form-control" name="user" id="inputEmail" placeholder="Username" required><span class="oi oi-envelope-closed"></span>       
+                                </div>
+                                <div class="form-group short">
+                                    <input type="password" class="forminput form-control" name="pass"id="inputPassword" placeholder="Password" required>
+                                    <span class="oi oi-key"></span> 
+                                </div>
+                                
+                                <div class="frm-btn">
+                                   <button type="submit" name="submit"class="btn btn-secondary btnsubmit" style="right:25px;bottom: 15px; position:absolute;">Login</button>
+                                    
+                                </div>
+                                
+                                                        
+                            </form> -->
+                            <a href="{% url 'dashboard'  %}">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+    <footer class="foot">
+        <div style="padding: 20px;">
+            <p class="blockqoute">    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque
+        pellentesque dolor, malesuada maximus nulla egestas dictum. Nam tellus elit,
+        placerat in dui vel, rutrum malesuada nunc. Maecenas et hendrerit mauris. Sed
+        eget nulla at orci ultricies facilisis non a velit. Quisque et pellentesque nibh, ut
+        pulvinar nibh. Etiam et urna bibendum, pretium ex sed, venenatis ante.
+        Maecenas fringilla, odio vitae condimentum viverra, purus nibh dignissim mi,
+        vel pellentesque urna tortor vitae leo. Vestibulum enim felis, finibus id iaculis
+        at, gravida sed urna. Duis nec nisi lectus. Duis condimentum lobortis ipsum eu
+        vulputate. Aenean nec lectus diam.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

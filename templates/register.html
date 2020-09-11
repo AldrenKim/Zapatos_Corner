@@ -1,0 +1,362 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static '../static/css/reg.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Register</title>
+    </head>
+    <body>
+        <div class="row bar">
+            <div class="col-md-1 fix"></div>
+            <div class="col-md-9 fix">
+                <span class="cont1" style="font-size: 25px;">Customer Registration</span>
+            </div>
+            <div class="col-md-2 fix">
+                <a href="{% url 'dashboard' %}"><span class="cont1" style="font-size: 25px;">Go back</span></a>
+            </div>
+        </div>
+        <div class="step-heads">
+            <ul class="progressbar">
+                <li>Step 1</li>
+                <li>Step 2</li>
+                <li>Step 3</li>
+                <li>Step 4</li>
+                <li>Step 5</li>
+                <li>Step 6</li>
+            </ul>
+        </div>
+        <div class="box">
+            <div class="containers">
+                <h3 class="heading step">Personal Information</h3>
+                <h3 class="heading step-1 gone-active">Elementary</h3>
+                <h3 class="heading step-2 gone-active">Junior High School</h3>
+                <h3 class="heading step-3 gone-active">Senior High School</h3>
+                <h3 class="heading step-4 gone-active">College</h3>
+                <h3 class="heading step-5 gone-active">Post Graduate</h3>
+                <h3 class="heading step-6 gone-active">Professional Background</h3>
+                <div class="probox step">
+                    <div class="fItems"></div>
+                    <div class="pic">
+                        <p>Profile Picture</p>
+                        <input type="file" name="profPic" id="propic">
+                    </div>
+                </div>
+                <form action="#">
+                    <div class="step gone-not">
+                        <div class="step row">
+                            <div class="step col-3">
+                                <label for="dateReg">Date Registered</label>
+                            </div>
+                            <div class="step col">
+                                <input type="text" name="dateReg" id="dateReg" disabled>
+                            </div>                  
+                        </div>
+                        <br>
+                        <div class="step row">
+                            <div class="step col-3">
+                                <label for="employeeID">EmployeeID </label>
+                            </div>
+                            <div class="step col">
+                                <input type="text" name="empID" id="empID" disabled>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step row">
+                            <div class="step col">
+                                <input type="text" class="form-control" id="name" placeholder="First Name" name="fname">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="midName" placeholder="Middle Name" name="mname">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="LName" placeholder="Last Name" name="lname">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step row">
+                            <div class="step col">
+                                <input type="text" class="form-control" id="adStreet" placeholder="Street" name="addStreet">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="adBrgy" placeholder="Brgy" name="addBrgy">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="adCity" placeholder="City" name="addCity">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="adProv" placeholder="Province" name="addProv">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="adZip" placeholder="Zip" name="addZip">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="adCountry" placeholder="Country" name="addCountry">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step row">
+                            <div class="step col">
+                                <label for="bday">Birthdate</label>
+                                <input type="date" class="form-control" id="bday"  name="bDay">
+                            </div>
+                            <div class="step col">
+                                <label for="status">Status</label>
+                                <select class="form-control" id="status">
+                                    <option>Single</option>
+                                    <option>Married</option>
+                                    <option>Widow</option>
+                                    <option>Divorced</option>
+                                </select>
+                            </div>
+                            <div class="step row">
+                                <div class="step col">
+                                    <label for="gender">Gender</label>
+                                    <select class="form-control" id="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="step row">
+                            <div class="step col">
+                                <input type="text" class="form-control" id="spouse" placeholder="Spouse's Name" name="spName">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="spouseOcc" placeholder="Spouse Occupation" name="spName">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="noChildren" placeholder="No. of Children" name="nChildren">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step row">
+                            <div class="step col">
+                                <input type="text" class="form-control" id="motherName" placeholder="Mother's Name" name="mtName">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="motherOccu" placeholder="Mother's Occupation" name="mtOcc">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step row">
+                            <div class="step col">
+                                <input type="text" class="form-control" id="fterName" placeholder="Father's Name" name="mtName">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="fterrOccu" placeholder="Father's Occupation" name="frOcc">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step row">
+                            <div class="step col">
+                                <input type="text" class="form-control" id="height" placeholder="Height" name="height">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="weight" placeholder="Weight" name="weight">
+                            </div>
+                            <div class="step col">
+                                <input type="text" class="form-control" id="religion" placeholder="Religion" name="religion">
+                            </div>
+                        </div>
+                        <div class=" step field-btn">
+                            <div><span></span></div>
+                            <div>
+                                <button class="fbutton btn btn-primary mt-3">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-1 gone-active">
+                        <div class="step-1 row">
+                            <div class="col">
+                                <input type="text" class="form-control" id="school" placeholder="School" name="school">
+                            </div>
+                            <div class="step-1 col">
+                                <input type="text" class="form-control" id="grade" placeholder="Grade" name="grade">
+                            </div>
+                            <div class="step-1 col">
+                                <input type="text" class="form-control" id="yComplete" placeholder="Year Completed" name="yComplete">
+                            </div>
+                            <div class="step-1 col">
+                                <input type="text" class="form-control" id="awards" placeholder="Awards" name="awards">
+                            </div>
+                        </div>
+                        <div class="step-1 field-btn">
+                            <div>
+                                <button class="prev-1 btn btn-primary mt-3">Previous</button>
+                            </div>
+                            <div>
+                                <button class="next-1 btn btn-primary mt-3">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-2 gone-active">
+                        <div class="step-2 row">
+                            <div class="step-2 col">
+                                <input type="text" class="form-control" id="schoolJS" placeholder="School" name="schoolJS">
+                            </div>
+                            <div class="step-2 col">
+                                <input type="text" class="form-control" id="gradeJS" placeholder="Grade" name="gradeJS">
+                            </div>
+                            <div class="step-2 col">
+                                <input type="text" class="form-control" id="yCompleteJS" placeholder="Year Completed" name="yCompleteJS">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step-2 row">
+                            <div class="step-2 col">
+                                <textarea class="form-control" id="awardsJH" placeholder="Awards"></textarea>
+                            </div>
+                        </div>
+                        <div class="step-2 field-btn">
+                            <div>
+                                <button class="prev-2 btn btn-primary mt-3">Previous</button>
+                            </div>
+                            <div>
+                                <button class="next-2 btn btn-primary mt-3">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-3 gone-active">
+                        <div class="step-3 row">
+                            <div class="step-3 col">
+                                <input type="text" class="form-control" id="schoolSH" placeholder="School" name="schoolSH">
+                            </div>
+                            <div class="step-3 col">
+                                <input type="text" class="form-control" id="gradeSH" placeholder="Grade" name="gradeSH">
+                            </div>
+                            <div class="step-3 col">
+                                <input type="text" class="form-control" id="yCompleteSH" placeholder="Year Completed" name="yCompleteSH">
+                            </div>
+                            <div class="step-3 col">
+                                <input type="text" class="form-control" id="strandSH" placeholder="Strand" name="strandSH">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step-3 row">
+                            <div class="step-3 col">
+                                <textarea class="form-control" id="awardsSH" placeholder="Awards"></textarea>
+                            </div>
+                        </div>
+                        <div class="step-3 field-btn">
+                            <div>
+                                <button class="prev-3 btn btn-primary mt-3">Previous</button>
+                            </div>
+                            <div>
+                                <button class="next-3 btn btn-primary mt-3">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-4 gone-active">
+                        <div class="step-4 row">
+                            <div class="step-4 col">
+                                <input type="text" class="form-control" id="schoolC" placeholder="School" name="schoolC">
+                            </div>
+                            <div class="step-4 col">
+                                <input type="text" class="form-control" id="courseC" placeholder="Course" name="courseC">
+                            </div>
+                            <div class="step-4 col">
+                                <input type="text" class="form-control" id="levelC" placeholder="Level" name="levelC">
+                            </div>
+                            <div class="step-4 col">
+                                <input type="text" class="form-control" id="yCompleteC" placeholder="Year Completed" name="yCompleteC">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step-4 row">
+                            <div class="step-4 col">
+                                <textarea class="form-control" id="awardsC" placeholder="Awards"></textarea>
+                            </div>
+                        </div>
+                        <div class="step-4 field-btn">
+                            <div>
+                                <button class="prev-4 btn btn-primary mt-3">Previous</button>
+                            </div>
+                            <div>
+                                <button class="next-4 btn btn-primary mt-3">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-5 gone-active">
+                        <div class="step-5 row">
+                            <div class="step-5 col">
+                                <input type="text" class="form-control" id="pgSchool" placeholder="School" name="pgSchool">
+                            </div>
+                            <div class="step-5 col">
+                                <input type="text" class="form-control" id="pgCourse" placeholder="Course" name="pgCourse">
+                            </div>
+                            <div class="step-5 col">
+                                <input type="text" class="form-control" id="pgLevel" placeholder="Level" name="pgLevel">
+                            </div>
+                            <div class="step-5 col">
+                                <input type="text" class="form-control" id="pgYcomplete" placeholder="Year Completed" name="pgYcomplete">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step-5 row">
+                            <div class="step-5 col">
+                                <textarea class="form-control" id="pgAwards"placeholder="Awards"></textarea>
+                            </div>
+                        </div>
+                        <div class="step-5 field-btn">
+                            <div>
+                                <button class="prev-5 btn btn-primary mt-3">Previous</button>
+                            </div>
+                            <div>
+                                <button class="next-5 btn btn-primary mt-3">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-6 gone-active">
+                        <div class="step-6 ">
+                            <br>
+                            <h6>Trainings: </h6>
+                        </div>
+                        <div class="step-6 row">
+                            <div class="step-6 col">
+                                <textarea class="form-control" id="title" placeholder="Title"></textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step-6 row">
+                            <div class="step-6 col">
+                                <textarea class="form-control" id="sponsor" placeholder="Sponsor"></textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step-6 row">
+                            <div class="step-6 col">
+                                <textarea class="form-control" id="date" placeholder="Date"></textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="step-6 row">
+                            <div class="step-6 col">
+                                <textarea class="form-control" id="venue" placeholder="Venue"></textarea>
+                            </div>
+                        </div>
+                        <div class="submit-btn field-btn">
+                            <div>
+                                <button class="prev-6 btn btn-primary mt-3">Previous</button>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="{% static '../static/javascript/jscript.js' %}"></script>
+    </body>
+</html>
